@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="./signup.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="./validation.js"></script>
+</head>
+<body>
+    
+<div class="container">
+    
+    <div class="signup-container">
+        <label><h1>Signup</h1></label>
+        <div class="name-details">
+            <input type="text" placeholder="Firstname" id="fname">
+            <input type="text" placeholder="Lastname" id="lname">
+        </div>
+
+        <div id="name-area"></div>
+        <div class="other-details">
+            <input type="email" placeholder="Email" id="email">
+            <div id="name-area2"></div>
+            <input type="password" placeholder="Password" id="pass">
+            <div id="name-area3"></div>
+            <input type="password" placeholder="Confirm Password" id="r-pass">
+            <div id="name-area4"></div>
+            <div class="accept">
+                <input type="checkbox" id="checkbox"> 
+                <span>  I accept the Terms of Use & Privacy Policy</span>
+                
+            </div>
+            <div id="name-area5"></div>
+                <div class="button">
+            <button  onclick="validate()">Signup</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

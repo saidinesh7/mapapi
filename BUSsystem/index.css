@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    font-size: 16px;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "ubuntu",sans-serif;
+}
+html,body{
+    overflow-x: hidden;
+}
+header .top-nav{
+    padding: 0;
+    display: flex;
+    position: relative;
+    background:linear-gradient(-60deg,#00b2ff,#0066ff);
+    align-items: center;
+    justify-content: space-around;
+    height:10vh;
+    box-shadow: 0px 5px 10px rgba(45, 46, 30, 0.466);
+}
+.top-nav .logo{
+    font-size: 2.5rem;
+   position: absolute;
+   left:2%;
+   color:white;
+}
+.nav-options ul {
+    display: flex;
+    position: absolute;
+    left:70%;
+    margin: -0.8rem 0rem;
+    list-style-type:none;
+    align-items: center;
+    width: 400px;
+    justify-content:space-evenly;
+}
+.nav-options ul li a{
+    text-decoration:none;
+    font-size: 1.2rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+.nav-options ul li a:hover{
+    color: black;
+    background-color: white;
+    padding:1rem 1.5rem;
+    border-radius: 10px;
+}
+
+.burger{
+    display: none;
+}
+
+/*sidemenu slide*/
+
+.sidemenu  {
+    z-index:1;
+    background-color:linear-gradient(-60deg,#00b2ff,#0066ff);;
+    width: 50%;
+    height:90vh;
+   float: right;
+    opacity: 0;
+   }
+   .sidemenu ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    
+}
+.sidemenu ul li {
+list-style-type: none;
+margin-top:7rem;
+
+}
+.sidemenu ul li a{
+    text-decoration: none;
+    color:white;
+    transition: all 0.3s ease;
+}
+.sidemenu ul li a:hover{
+    color: black;
+    background-color:white;
+    padding:1rem 1.5rem;
+    border-radius: 10px;
+}
+
+
+/*<<<<<<<<<<<<<<<<<<main area>>>>>>>>>>>>>>>*/
+.main-body {
+    position: absolute;
+    display: flex;
+    z-index:1;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    width:100%;
+}
+.main-body .section{
+    width:100%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-body .section h1{
+ font-size: 3rem;
+}
+.main-body .section h1 span{
+    font-size: 4rem;
+}
+.buttons-cda{
+   width:50%;
+ margin-top: 5rem;
+ display: flex;
+ margin-top: 4rem;
+ align-items: center;
+ justify-content:space-evenly;
+}
+.buttons-cda >a{
+    height: 6vh;
+    
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration:none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.buttons-cda .login-button{
+    background-color:#0066ff;
+    padding: 0.8rem 3rem;
+    color: white;
+    transition: 0.3s all ease-in-out;
+}
+.buttons-cda .login-button:hover{
+    box-shadow: 0px 10px 20px gray;
+}
+.buttons-cda .signup-button{
+   color: black;
+   border:2px solid #0066ff;
+   padding: 0.7rem 3rem;
+   transition: 0.3s all ease-in-out;
+}
+.buttons-cda .signup-button:hover{
+    box-shadow: 0px 7px 20px gray;
+}
+/*<<<<<<<<XXXX<<<<<<<<<<main area>>>>>>>XXXX>>>>>>>>*/
+
+
+/*media queries
+*/
+@media (max-width:720px){
+  
+    body{
+        overflow-x: hidden;
+    }
+
+    .burger{
+        display: block;
+        position:absolute;
+        top:30%;
+        left:90%;
+        cursor: pointer;
+        transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+ 
+    .nav-options ul{
+        display: none;
+    }
+    .burger .fa-bars{
+        font-size: 2rem;
+        
+    }
+    .burger .fa-times{
+        font-size: 2rem;
+        
+    }
+/*sidemenu slide*/
+    .sidemenu  {
+        background-color:#1e90ff;
+        width: 100%;
+        position: relative;
+        z-index:auto;
+        height:100vh;
+        transition: all 0.3s ease-in-out;
+        box-shadow: -10px 0px 20px rgba(45, 46, 30, 0.466);
+       }
+  
+    .sidemenu ul{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items:center;
+        
+    }
+    .sidemenu ul li {
+    list-style-type: none;
+    margin-top:7rem;
+    
+    }
+    .sidemenu ul li a{
+        text-decoration: none;
+        color:white;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+    .sidemenu ul li a:hover{
+        color: black;
+        background-color:white;
+        padding:1rem 1.5rem;
+        border-radius: 10px;
+    }
+.sidemenu.active{
+    opacity: 1;
+}
+/*<<<<<<<<<<<<<<<<<<main area>>>>>>>>>>>>>>>*/
+.main-body {
+    position: absolute;
+    z-index:auto;
+}
+
+.main-body .section{
+
+    margin:2rem 4rem;
+}
+    .main-body .section h1{
+        font-size: 2rem;
+       }
+       .main-body .section h1 span{
+        font-size: 3rem;
+    }
+    .buttons-cda{
+        display: flex;
+        flex-direction: column;
+      
+            }
+            .buttons-cda .signup-button{
+                margin-top: 2rem;
+            }
+   /*<<<<<<<<XXXX<<<<<<<<<<main area>>>>>>>>XXXX>>>>>>>*/
+}
+
+

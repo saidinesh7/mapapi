@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script>
+        function togglesidebar(){
+        const sidebar=document.querySelector(".sidemenu");
+        const menuopen=document.querySelector(".fa-bars");
+        const menuclose=document.querySelector(".fa-times");
+
+
+        sidebar.classList.toggle("active");
+        menuopen.classList.toggle("fa-times");
+        
+
+    }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="logo">
+                LOGO
+            </div>
+            <div class="nav-options">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./Services.html">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+           
+            <div class="burger" id="burger" >
+                <i class="fas fa-bars" onclick="togglesidebar()"></i>
+              
+            </div>
+             </nav>
+             
+         <div class="sidemenu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+         </div>           
+    </header>
+    <main class="main-body">
+      <div class="section">
+          <h1>First Web Application for <span>BUS TRACKING</span></h1>
+        <div class="buttons-cda">
+          <a href="./login.html" class="login-button">
+              Login
+          </a>  
+          <a href="./signup.html" class="signup-button">
+            Signup
+        </a> 
+        </div>
+        </div>
+      
+      </main>
+
+    </body>
+</html>
+
